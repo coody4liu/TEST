@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>VS</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="stylesheet" href="assets/css/amazeui.css"/>
+  <link rel="stylesheet" href="dySpace/css/1.css"/>
+
+</head>
+<body onload="output_onload()">
+<header class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+    <h1 class="am-topbar-brand">
+      <a href="#">LOGO</a>
+    </h1>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only"
+            data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span
+        class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="collapse-head">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li class="am-active"><a href="#">Virtual Server</a></li>
+        <li class="am-dropdown" data-am-dropdown>
+          <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+            Virtual Device <span class="am-icon-caret-down"></span>
+          </a>
+          <ul class="am-dropdown-content">
+            <li class="am-dropdown-header">You can use them to ....</li>
+            <li><a href="#">UDP</a></li>
+            <li><a href="#">HTTP</a></li>
+            <li><a href="#">MQTT</a></li>
+          </ul>
+          <li><a href="#">About</a></li>
+        </li>
+      </ul>
+
+
+      <div class="am-topbar-right">
+        <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm"><span class="am-icon-pencil"></span> Sign up</button>
+      </div>
+
+      <div class="am-topbar-right">
+        <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="am-icon-user"></span> Sign in</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div style="padding: 40px;">
+</div>
+
+<div class="am-g">
+  <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
+    <div>
+      <div>
+        <h2 class="am-text-primary am-text-xxl">Virtual Server</h2>
+        <p>Virutal Server is a tool aim to help you for test your on hand IoT hardware. Both MQTT, HTTP API, UDP, and RR are supported.</p>
+        <p class="am-text-warning">Server Address:</p>
+        <p>MQTT : iot.dorony.com:1883</p>
+        <p>HTTP : iot.dorony.com:2424/api/v1/</p>
+        <p>UDP  : iot.dorony.com:2323</p>
+
+
+        <code>$> mosquitto_pub -h 10.211.55.4 -t "rx" -u "coody" -P "liu383" -m "{\"token\":\"T7V511GS</code>
+        <code>J5KP1KJY\", \"message\":\"Hi from mosquitto\"}"</code>
+        <p></p>
+        <code>$> curl -i -X POST -H "Content-Type:application/x-www-form-urlencoded" 10.211.55.4:2424/</code>
+        <code>api/v1/rx -d 'token=T7V511GSJ5KP1KJY&message=Hi from UDP client'</code>
+        <p></p>
+        <code>$> echo "{\"token\":\"T7V511GSJ5KP1KJY\", \"message\":\"Hi from UDP client\"}" | socat -</code>
+        <code>udp4-datagram:10.211.55.4:2323</code>
+
+      </div>
+    </div>
+    <div class="am-btn-group">
+      <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="am-icon-download"></span> SDKs</button>
+      <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm"><span class="am-icon-download"></span> Examples</button>
+    </div>
+
+    <div id="first" class="box">
+      <div></div>
+      <form><input autocomplete="off" value="Type here..."></input></form>
+    </div>
+
+  </div>
+</div>
+
+<div style="padding: 60px;">
+</div>
+
+<footer class="footer">
+  <p>Copyright © 2018 <a href="https://www.dorony.com" target="_blank">Dorony Limited</a></p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<!--[ My Own javascript functions ] -->
+<script src="dySpace/js/WebSocket.js"></script>
+
+</body>
+</html>
